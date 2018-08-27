@@ -29,7 +29,7 @@ var Styler = exports.Styler = function () {
       dot.style['height'] = this.panel.radius;
       dot.style['line-height'] = this.panel.radius;
       dot.style['text-align'] = 'center';
-      dot.style['font-size'] = this.panel.label.fontSize;
+      dot.style['font-size'] = this.panel.labelFontSize;
       dot.style['color'] = this.panel.labelColor;
 
       dot.linkStyle = {};

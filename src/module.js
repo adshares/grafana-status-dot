@@ -18,11 +18,9 @@ const panelDefaults = {
   mathDisplayValue: 'data[end]',
   mathColorValue: 'data[end]',
   labelColor: 'rgb(255, 255, 255)',
-  label: {
-    visible: false,
-    pattern: '(.*)',
-    fontSize: '0.6em'
-  }
+  labelVisible: false,
+  labelPattern: '(.*)',
+  labelFontSize: '0.6em'
 }
 
 export class PanelCtrl extends MetricsPanelCtrl {

@@ -19,16 +19,16 @@
 			</ul>
 		</div>
 
-		<gf-form-switch class="gf-form" label="Show Labels" label-class="width-10" checked="ctrl.panel.label.visible" on-change="ctrl.render()"></gf-form-switch>
-		<div class="gf-form" ng-if="ctrl.panel.label.visible">
+		<gf-form-switch class="gf-form" label="Show Labels" label-class="width-10" checked="ctrl.panel.labelVisible" on-change="ctrl.render()"></gf-form-switch>
+		<div class="gf-form" ng-if="ctrl.panel.labelVisible">
 			<label class="gf-form-label width-10">Label Pattern <i class="grafana-tip fa fa-question-circle" bs-tooltip="'Exp. `^x([0-9]+)\.` '" data-original-title="" title=""></i></label>
-			<input type="text" class="input-small gf-form-input width-10" ng-model="ctrl.panel.label.pattern" ng-change="ctrl.render()">
+			<input type="text" class="input-small gf-form-input width-10" ng-model="ctrl.panel.labelPattern" ng-change="ctrl.render()">
 		</div>
-		<div class="gf-form" ng-if="ctrl.panel.label.visible">
+		<div class="gf-form" ng-if="ctrl.panel.labelVisible">
 			<label class="gf-form-label width-10">Label Font Size</label>
-			<input type="text" class="input-small gf-form-input width-10" ng-model="ctrl.panel.label.fontSize" ng-change="ctrl.render()">
+			<input type="text" class="input-small gf-form-input width-10" ng-model="ctrl.panel.labelFontSize" ng-change="ctrl.render()">
 		</div>
-        <div class="gf-form" ng-if="ctrl.panel.label.visible">
+        <div class="gf-form" ng-if="ctrl.panel.labelVisible">
             <label class="gf-form-label width-10">Default Color</label>
             <label class="gf-form-label">
                 <spectrum-picker ng-model="ctrl.panel.labelColor" ng-change="ctrl.render()"/>

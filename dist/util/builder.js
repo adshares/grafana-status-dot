@@ -37,16 +37,25 @@ var Builder = exports.Builder = function () {
       var colorValueExp = this.panel.mathColorValue;
       var scope = { data: this._toValues(series) };
 
-      return { name: series.target,
-        label: this._getLabel(series.target),
+      var dot = { name: series.target,
         scratchPad: math.eval(scratchPadExp, scope),
         displayValue: math.eval(displayValueExp, scope),
         colorValue: math.eval(colorValueExp, scope) };
+
+      var label = this._getLabel(series.target);
+      if (label) {
+        dot.label = label;
+      }
+
+      return dot;
     }
   }, {
     key: '_getLabel',
     value: function _getLabel(name) {
-      var matches = new RegExp(this.panel.label.pattern).exec(name);
+      if (!this.panel.labelVisible) {
+        return '';
+      }
+      var matches = new RegExp(this.panel.labelPattern).exec(name);
       return matches && matches.length ? matches[1] : '';
     }
   }, {
