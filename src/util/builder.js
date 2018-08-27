@@ -16,9 +16,15 @@ export class Builder {
     var scope = { data: this._toValues(series) }
 
     return { name: series.target,
+      label: this._getLabel(series.target),
       scratchPad: math.eval(scratchPadExp, scope),
       displayValue: math.eval(displayValueExp, scope),
       colorValue: math.eval(colorValueExp, scope) }
+  }
+
+  _getLabel (name) {
+    var matches = (new RegExp(this.panel.label.pattern)).exec(name)
+    return matches && matches.length ? matches[1] : ''
   }
 
   _toValues (series) {

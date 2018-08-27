@@ -1,5 +1,5 @@
-<div style="display: inline-block" ng-repeat="dot in ctrl.dots">
-  <a ng-href="{{dot.link.href}}" target="{{dot.link.target}}" bs-tooltip="dot.tooltip" data-placement="bottom">
-    <div style="margin: 5px; border-radius: 100%" ng-style="dot.style"/>
+<div style="display: inline-block; vertical-align: top;" ng-repeat="dot in ctrl.dots">
+  <a ng-href="{{dot.link.href}}" target="{{dot.link.target}}" bs-tooltip="dot.tooltip" data-placement="bottom" ng-style="dot.linkStyle">
+    <div style="margin: 5px; border-radius: 100%" ng-style="dot.style">{{dot.label}}</div>
   </a>
 </div>

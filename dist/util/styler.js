@@ -27,6 +27,13 @@ var Styler = exports.Styler = function () {
       dot.style['background'] = dot.color;
       dot.style['width'] = this.panel.radius;
       dot.style['height'] = this.panel.radius;
+      dot.style['line-height'] = this.panel.radius;
+      dot.style['text-align'] = 'center';
+      dot.style['font-size'] = this.panel.label.fontSize;
+      dot.style['color'] = this.panel.labelColor;
+
+      dot.linkStyle = {};
+      dot.linkStyle['font-size'] = this.panel.radius;
     }
   }]);
 

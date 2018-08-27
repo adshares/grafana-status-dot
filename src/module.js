@@ -16,7 +16,13 @@ const panelDefaults = {
   decimals: 2,
   mathScratchPad: 'data = size(data)[1] == 0 ? [NaN] : data',
   mathDisplayValue: 'data[end]',
-  mathColorValue: 'data[end]'
+  mathColorValue: 'data[end]',
+  labelColor: 'rgb(255, 255, 255)',
+  label: {
+    visible: false,
+    pattern: '(.*)',
+    fontSize: '0.6em'
+  }
 }
 
 export class PanelCtrl extends MetricsPanelCtrl {
